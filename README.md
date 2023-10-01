@@ -5,6 +5,8 @@ Um projeto de Create, Really, Update e Delete proposto pelo curso de Análise e 
 
 Projeto consiste somente na construção do modelo MVC seguindo o principio da "Responsabilidade Ùnica" (SOLID).
 
+Atualização da Api adicionando a documentação feita pelo swagger-ui.
+
 
 
 
