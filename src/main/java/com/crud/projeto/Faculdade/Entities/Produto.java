@@ -1,5 +1,6 @@
 package com.crud.projeto.Faculdade.Entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -17,6 +18,7 @@ public class Produto {
 
     @ManyToOne
     @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
+    @JsonBackReference
     private Categoria categoria;
 
     @ManyToMany
@@ -56,16 +58,4 @@ public class Produto {
         this.pedidos = pedidos;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
-        return Objects.equals(produtoId, produto.produtoId) && Objects.equals(produtoName, produto.produtoName) && Objects.equals(categoria, produto.categoria) && Objects.equals(pedidos, produto.pedidos);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(produtoId, produtoName, categoria, pedidos);
-    }
 }

@@ -44,16 +44,4 @@ public class Pedido {
         this.produtos = produtos;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Pedido pedido = (Pedido) o;
-        return Objects.equals(pedidoId, pedido.pedidoId) && Objects.equals(pedidoData, pedido.pedidoData) && Objects.equals(produtos, pedido.produtos);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(pedidoId, pedidoData, produtos);
-    }
 }
